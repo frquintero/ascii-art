@@ -30,7 +30,7 @@ def main(input, chars, width):
                 # Convert image
                 result = converter.convert_image_to_ascii(input, chars, width)
             else:
-                raise ValueError(f"Unsupported file type. Only image files (PNG, JPG, BMP) are supported.")
+                raise ValueError("Unsupported file type. Only image files (PNG, JPG, BMP) are supported.")
         else:
             # Validate text
             utils.validate_text(input)

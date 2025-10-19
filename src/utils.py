@@ -43,7 +43,7 @@ def validate_image_file(file_path):
         raise FileNotFoundError(f"File not found: {file_path}")
 
     if not is_image_file(file_path):
-        raise ValueError(f"Unsupported image format. Supported: PNG, JPG, BMP")
+        raise ValueError("Unsupported image format. Supported: PNG, JPG, BMP")
 
     # Check file size (under 10MB as per success criteria)
     file_size = os.path.getsize(file_path)

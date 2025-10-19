@@ -5,7 +5,6 @@ Core algorithms for converting images and text to ASCII art.
 """
 
 from PIL import Image, ImageEnhance
-import os
 from pyfiglet import figlet_format
 from termcolor import colored
 

@@ -3,7 +3,6 @@ Integration tests for CLI.
 """
 
 import subprocess
-import pytest
 import tempfile
 import os
 from pathlib import Path
