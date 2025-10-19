@@ -1,8 +1,24 @@
-# Copilot Instructions
+# amp_test Development Guidelines
 
-These are the default guidelines for this repository.
+Auto-generated from all feature plans. Last updated: 2025-10-18
 
-- Keep edits small and explain PRs clearly.
-- Follow project style guides and existing patterns.
-- Add/adjust tests when behavior changes.
-- Use Conventional Commits in commit messages.
+## Active Technologies
+- (001-specify-scripts-bash)
+
+## Project Structure
+```
+src/
+tests/
+```
+
+## Commands
+# Add commands for 
+
+## Code Style
+: Follow standard conventions
+
+## Recent Changes
+- 001-specify-scripts-bash: Added
+
+<!-- MANUAL ADDITIONS START -->
+<!-- MANUAL ADDITIONS END -->

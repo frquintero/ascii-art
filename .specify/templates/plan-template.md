@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- **Clear and Modern Coding**: Plan must specify use of modern language features and clear coding standards.
+- **No Patching Solutions**: Ensure proposed solution addresses root causes, not temporary fixes.
+- **Test-Driven Development**: Plan must include test strategy and TDD approach.
+- **Code Review**: Define code review process and quality gates.
+- **Documentation**: Plan must include documentation strategy for the feature.
 
 ## Project Structure
 
