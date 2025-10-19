@@ -29,3 +29,9 @@ Thumbs.db
 *.swp
 .vscode/
 .idea/
+.github
+.spectify/
+
+
+# Project specific
+specs/

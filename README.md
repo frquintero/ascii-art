@@ -5,7 +5,7 @@ A command-line tool that converts images and text into ASCII art representations
 ## Features
 
 - **Image Conversion**: Convert PNG, JPG, and BMP images to ASCII art
-- **Text Conversion**: Transform text strings into ASCII art
+- **Text Conversion**: Transform text strings into colored ASCII art banners
 - **Customizable Characters**: Choose your own character set for different visual styles
 - **Adjustable Density**: Control output width for different resolutions
 - **Fast Processing**: Optimized for quick conversions
@@ -14,19 +14,19 @@ A command-line tool that converts images and text into ASCII art representations
 ## Requirements
 
 - Python 3.11 or higher
-- Dependencies: `click`, `pillow`
+- Dependencies listed in `requirements.txt`
 
 ## Installation
 
 1. Clone or download the repository
 2. Install dependencies:
-   ```bash
-   pip install click pillow
-   ```
+```bash
+pip install -r requirements.txt
+```
 3. Run the tool:
-   ```bash
-   python -m src.cli [options] input
-   ```
+```bash
+python -m src.cli [options] input
+```
 
 ## Usage
 
@@ -67,15 +67,11 @@ python -m src.cli --chars "01" --width 100 image.bmp
 #### Convert Text
 
 ```bash
-# Basic text conversion (creates ASCII art banner)
+# Basic text conversion (creates colored ASCII art banner)
 python -m src.cli "Hello World"
 
-# Output:
-# H   H EEEEE L     L      OOO        W   W  OOO  RRRR  L     DDD
-# H   H E     L     L     O   O       W   W O   O R   R L     D  D
-# HHHHH EEE   L     L     O   O       W W W O   O RRRR  L     D  D
-# H   H E     L     L     O   O       WW WW O   O R R   L     D  D
-# H   H EEEEE LLLLL LLLLL  OOO        W   W  OOO  R   R LLLLL DDD
+# Output: Colored ASCII art where each character has a different color
+# (red H, green E, yellow L, etc.)
 
 # Wide output (affects future enhancements)
 python -m src.cli --width 150 "Big Text Banner"
@@ -117,19 +113,34 @@ pytest tests/
 ### Project Structure
 
 ```
+.github/
+├── copilot-instructions.md    # AI assistant guidelines
+└── prompts/                   # Speckit agent prompts
+
+.specify/
+├── memory/                    # Constitution and project memory
+└── templates/                 # Plan templates
+
+specs/
+└── [feature-branch]/          # Feature specifications and docs
+
 src/
-├── cli.py          # Main CLI interface
-├── converter.py    # Core conversion algorithms
-└── utils.py        # Helper functions and validation
+├── cli.py                     # Main CLI interface
+├── converter.py               # Core conversion algorithms
+├── database.py                # Database setup (future use)
+└── utils.py                   # Helper functions and validation
 
 tests/
-├── unit/           # Unit tests
-└── integration/    # Integration tests
+├── unit/                      # Unit tests
+└── integration/               # Integration tests
+
+screenshots/                   # Sample outputs and images
 ```
 
 ## Technical Details
 
-- **Image Processing**: Uses Pillow for image loading and grayscale conversion
+- **Image Processing**: Uses Pillow for image loading, grayscale conversion, and enhancement
+- **Text Processing**: Uses PyFiglet for ASCII art text generation and Termcolor for coloring
 - **Algorithm**: Maps pixel brightness to characters in the specified set
 - **Aspect Ratio**: Automatically maintained with character aspect ratio correction
 - **Performance**: Designed for images up to 10MB, processing in seconds
